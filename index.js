@@ -1,5 +1,5 @@
 const express = require('express');
-const reviewsRouter = require("./reviews/reviewsrouter")
+const reviewsRouter = require("./reviews/reviews-router")
 
 const server = express();
 
