@@ -3,7 +3,8 @@ const router = express.Router()
 const Reviews = require('./reveiws-model')
 
 router.get('/', (req, res) => {
-    Reviews.get()
+    const {limit, soryBy, sortDir} = req.query;
+    Reviews.get({ limit, soryBy, sortDir})
     .then(reviews => {
         res.status(200).json({reviews})
     })
